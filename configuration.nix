@@ -99,7 +99,15 @@
   programs.fish.interactiveShellInit = " starship init fish | source" ; 
   # Install firefox.
   programs.firefox.enable = true;
-
+# Vietnamese Input Method Configuration
+  i18n.inputMethod = {
+  enable = true;
+  type = "fcitx5";
+  fcitx5.addons = with pkgs; [
+    fcitx5-bamboo
+    fcitx5-gtk  # For GTK apps like Firefox/Signal
+  ];
+};
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -130,7 +138,9 @@
     yaziPlugins.starship
     fzf
     starship
-
+    signal-desktop
+    #theme
+    arc-kde-theme
   ];
   # NVIDIA DRIVER FORCE
   services.xserver.videoDrivers = [ "nvidia" ];
