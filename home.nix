@@ -42,7 +42,7 @@ programs.git = {
   enable = true; 
   settings = {
       user = {
-          name = "blondeuser"
+          name = "blondeuser";
           email = "vihao.cloud2@gmail.com";
         };
     }; 
