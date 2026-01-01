@@ -12,6 +12,9 @@
     kdePackages.kate
     neofetch
     yazi
+    fastfetch
+    cmatrix #matrix rain
+    rustdesk-flutter 
   ];
 
   # Home Manager itself
