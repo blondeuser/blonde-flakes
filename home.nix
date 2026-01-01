@@ -43,6 +43,7 @@
     enable = true;
     enableFishIntegration = true;
     settings = {
+      command = "${pkgs.fish}/bin/fish";
       theme = "TokyoNight";
       font-family = "JetBrainsMono Nerd Font";
       font-size = 12;
