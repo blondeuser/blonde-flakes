@@ -16,6 +16,7 @@
     cmatrix #matrix rain
     rustdesk-flutter #remote dekstopcontrol app  
     kde-rounded-corners # kwin effect
+    krita #drawing app
   ];
 
   # Home Manager itself
