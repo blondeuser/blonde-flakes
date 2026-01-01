@@ -60,6 +60,10 @@
     layout = "us";
     variant = "";
   };
+# 1. Register Fish as a valid shell
+  programs.fish.enable = true;
+
+
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -88,13 +92,14 @@
     isNormalUser = true;
     description = "blonde";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
     ];
   };
   #Enable fish shell
-  programs.fish.enable = true;
+  #programs.fish.enable = true;
   # Install firefox.
   programs.firefox.enable = true;
 # Vietnamese Input Method Configuration
