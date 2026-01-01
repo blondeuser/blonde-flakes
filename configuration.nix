@@ -2,15 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, kwin-effects-forceblur,... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
     ];
-
-  # Bootloader.
+     # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -85,7 +84,6 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.blonde = {
-    shell = pkgs.fish;
     isNormalUser = true;
     description = "blonde";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -96,7 +94,6 @@
   };
   #Enable fish shell
   programs.fish.enable = true;
-  programs.fish.interactiveShellInit = " starship init fish | source" ; 
   # Install firefox.
   programs.firefox.enable = true;
 # Vietnamese Input Method Configuration
@@ -119,7 +116,6 @@
     neovim
     btop
     chromium
-    yazi
     ghostty
     git
     ripgrep
@@ -133,14 +129,8 @@
     unzip
     lua-language-server
     nil
-    neofetch
-    yazi
-    yaziPlugins.starship
     fzf
-    starship
-    signal-desktop
-    #theme
-    arc-kde-theme
+    kwin-effects-forceblur.packages.${pkgs.system}.default
   ];
   # NVIDIA DRIVER FORCE
   services.xserver.videoDrivers = [ "nvidia" ];
