@@ -14,7 +14,8 @@
     yazi
     fastfetch
     cmatrix #matrix rain
-    rustdesk-flutter 
+    rustdesk-flutter #remote dekstopcontrol app  
+    kde-rounded-corners # kwin effect
   ];
 
   # Home Manager itself
@@ -48,6 +49,9 @@
       background-blur = true;
       window-decoration = false;
       confirm-close-surface = false;
+      window-padding-x = 15;
+      window-padding-y = 15;
+      window-padding-balance = true;
     };
   };
 
