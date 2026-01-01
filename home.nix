@@ -1,50 +1,61 @@
-{ config, pkgs,...}:
+{ config, pkgs, ... }:
 
 {
-# User info
-home.username = "blonde";
-home.homeDirectory = "/home/blonde";
-# State version
-home.stateVersion = "25.11";
-#User-specific Packages
-#Move app here if you dont need avaiable for "root"
-home.packages = with pkgs; [
-#Desktopapps
-signal-desktop
-kdePackages.kate
+  # User info
+  home.username = "blonde";
+  home.homeDirectory = "/home/blonde";
+  home.stateVersion = "25.11";
 
+  # User-specific packages
+  home.packages = with pkgs; [
+    signal-desktop
+    kdePackages.kate
+    neofetch
+    yazi
+  ];
 
-#CLI tools
-neofetch
-yazi
+  # Home Manager itself
+  programs.home-manager.enable = true;
 
-];
-
-# Program and & Shell
-programs.home-manager.enable = true; 
-# Starship config
-programs.starship ={
-enable = true;
-enableFishIntegration = true;
+  # Starship config
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
   };
-# Fish shell config
-programs.fish = {
-enable = true;
-# Aliasas 
-shellAliases ={
-   btw = "echo i use nixos,btw";
-   rebuild = " sudo nixos-rebuild switch --flake . --impure";
-   v = "nvim";
+
+  # Fish shell config
+  programs.fish = {
+    enable = true;
+    shellAliases = {
+      btw = "echo i use nixos, btw";
+      rebuild = "sudo nixos-rebuild switch --flake . --impure";
+      v = "nvim";
     };
   };
-#Git config
-programs.git = {
-  enable = true; 
-  settings = {
-      user = {
-          name = "blondeuser";
-          email = "vihao.cloud2@gmail.com";
-        };
-    }; 
+
+  # Ghostty config
+  programs.ghostty = {
+    enable = true;
+    enableFishIntegration = true;
+    settings = {
+      theme = "TokyoNight";
+      font-family = "JetBrainsMono Nerd Font";
+      font-size = 12;
+      background-opacity = 0.85;
+      background-blur = true;
+      window-decoration = false;
+      confirm-close-surface = false;
+    };
   };
-  }
+
+  # Git config
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        name = "blondeuser";
+        email = "vihao.cloud2@gmail.com";
+      };
+    };
+  };
+}
