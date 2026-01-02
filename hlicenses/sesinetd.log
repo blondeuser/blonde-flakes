@@ -1,0 +1,33 @@
+[2026-01-02 13:42:26] [INFO - Licensing] [Manager] - Using /usr/lib/sesi/sesinetd.ini for server options...
+[2026-01-02 13:42:26] [WARN - Licensing] [Manager] - setgid(0)[root] failed (22: Invalid argument)
+[2026-01-02 13:44:38] [INFO - Licensing] [Manager] - Using /usr/lib/sesi/sesinetd.ini for server options...
+[2026-01-02 13:44:38] [ERROR - Licensing] [Manager] - License server usage reporting is unable to create the directory '/usr/lib/sesi' for the usage report. Turning off usage reporting.
+[2026-01-02 13:44:38] [ERROR - Licensing] [Manager] - Migration failure: Migration 001_initial failed for model content_type_mig with error SQL logic error.
+[2026-01-02 13:44:38] [INFO - Networking] [General] - Starting release server v21.0.559 at http://0.0.0.0:1715/
+[2026-01-02 13:44:38] [ERROR - Licensing] [Manager] - Failed to open cache database.
+[2026-01-02 13:44:38] [INFO - Licensing] [Manager] - Server Ip Address lookup success.
+[2026-01-02 13:44:38] [INFO - Licensing] [Manager] - Error while loading webhooks: SQL logic error
+[2026-01-02 13:44:38] [WARN - Licensing] [Manager] - Error occurred while fetching subscriptions: SQL logic error
+[2026-01-02 13:44:38] [WARN - Licensing] [Manager] - Error occurred while registering webhook event (License Checkout): SQL logic error
+[2026-01-02 13:44:38] [WARN - Licensing] [Manager] - Error occurred while fetching subscriptions: SQL logic error
+[2026-01-02 13:44:38] [WARN - Licensing] [Manager] - Error occurred while registering webhook event (License Checkin): SQL logic error
+[2026-01-02 13:44:38] [WARN - Licensing] [Manager] - Error occurred while fetching subscriptions: SQL logic error
+[2026-01-02 13:44:38] [WARN - Licensing] [Manager] - Error occurred while registering webhook event (License Heartbeat): SQL logic error
+[2026-01-02 13:44:38] [ERROR - Licensing] [Manager] - Failed to open cache database.
+[2026-01-02 13:44:38] [WARN - Licensing] [Manager] - Failed to save webhook changes: SQL logic error
+[2026-01-02 13:44:38] [FATAL - Licensing] [Manager] - Failed to open license file.
+[2026-01-02 13:45:19] [INFO - Licensing] [Manager] - FAIL blonde@blonde-flakes 21.0 127.0.0.1 houdini 233780
+[2026-01-02 13:46:03] [DEBUG - Licensing] [Manager] - installing new server key
+[2026-01-02 13:46:03] [INFO - Licensing] [Manager] - Installed license: LICENSE Generic Render-NonCommercial 21.0 1 01-feb-2026 +.+.+.+ blonde-flakes d8f5948d Kx21AQVaOATmW89N7rjdI+j63eHZnEDLFFqKYj68WuXWbr0acWpFW8CR1Niu9lkEVs8uAG@P68FQSE
+[2026-01-02 13:46:03] [DEBUG - Licensing] [Manager] - installing new license key
+[2026-01-02 13:46:03] [INFO - Licensing] [Manager] - Installed license: LICENSE Generic Karma-Render-NonCommercial 21.0 1 01-feb-2026 +.+.+.+ blonde-flakes fae971d5 5uD+KuCgqg+KHmD6nVjCkKT+FIJHGyQJrgwZAnA3HaDkHrWfnqB856R9TfYTuLUSNCjaRvfnmx4KX0
+[2026-01-02 13:46:03] [DEBUG - Licensing] [Manager] - installing new license key
+[2026-01-02 13:46:03] [INFO - Licensing] [Manager] - Installed license: LICENSE Generic Houdini-Master-NonCommercial 21.0 1 01-feb-2026 +.+.+.+ blonde-flakes 3e86b1df 5o67L+ZvLrs5opaBbqEsf1hhG9G2VkIhhqXvLK20vIO1mOcsyO43ALofGmCcB5UhRLnLrWt0mMroG2
+[2026-01-02 13:46:03] [DEBUG - Licensing] [Manager] - installing new license key
+[2026-01-02 13:46:32] [INFO - Licensing] [Manager] - OUT 3e86b1df 15ea0001 [houdini - Houdini Apprentice] blonde@blonde-flakes
+[2026-01-02 13:47:33] [INFO - Licensing] [Manager] - HEARTBEAT 3e86b1df 15ea0001 [Houdini Apprentice] blonde@blonde-flakes pass
+[2026-01-02 13:48:34] [INFO - Licensing] [Manager] - HEARTBEAT 3e86b1df 15ea0001 [Houdini Apprentice] blonde@blonde-flakes pass
+[2026-01-02 13:49:35] [INFO - Licensing] [Manager] - HEARTBEAT 3e86b1df 15ea0001 [Houdini Apprentice] blonde@blonde-flakes pass
+[2026-01-02 13:49:54] [INFO - Licensing] [Manager] - FAIL blonde@blonde-flakes 21.0 127.0.0.1 houdini 233780
+[2026-01-02 13:50:36] [INFO - Licensing] [Manager] - HEARTBEAT 3e86b1df 15ea0001 [Houdini Apprentice] blonde@blonde-flakes pass
+[2026-01-02 13:51:25] [INFO - Licensing] [Manager] - IN 3e86b1df 15ea0001 [Houdini Apprentice] blonde@blonde-flakes

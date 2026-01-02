@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, kwin-effects-forceblur,... }:
+{ config, pkgs, kwin-effects-forceblur, houdini-nix, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      # add the sesi modules from flake
     ];
      # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -107,7 +108,6 @@
 };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -130,7 +130,14 @@
     lua-language-server
     nil
     fzf
+    nettools
+    curl
+  libxcb
+  libxkbcommon
+  util-linux
+  # flake input
     kwin-effects-forceblur.packages.${pkgs.system}.default
+    houdini-nix.packages.${pkgs.system}.houdini-21_0_559
   ];
   # NVIDIA DRIVER FORCE
   services.xserver.videoDrivers = [ "nvidia" ];

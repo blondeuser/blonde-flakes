@@ -16,6 +16,7 @@
     cmatrix #matrix rain
     kde-rounded-corners # kwin effect
     krita #drawing app
+    expect
   ];
 
   # Home Manager itself
