@@ -17,6 +17,13 @@
     kde-rounded-corners # kwin effect
     krita #drawing app
     expect
+    python3
+    pyright 
+    ruff 
+    black 
+    python3Packages.debugpy
+    mesa
+    tailscale
   ];
 
   # Home Manager itself
@@ -44,7 +51,7 @@
     enableFishIntegration = true;
     settings = {
       command = "${pkgs.fish}/bin/fish";
-      theme = "TokyoNight";
+      theme = "Catppuccin Mocha";
       font-family = "JetBrainsMono Nerd Font";
       font-size = 12;
       background-opacity = 0.85;

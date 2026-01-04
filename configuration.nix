@@ -16,7 +16,15 @@
 
   networking.hostName = "blonde-flakes"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  # Zen kernal
+boot.kernelPackages = pkgs.linuxPackages_zen;
+  #optimization
+  services.ananicy = {
+  enable = true;
+  package = pkgs.ananicy-cpp;
+  # Most versions of this module expect a single package, not a list
+  rulesProvider = pkgs.ananicy-rules-cachyos; 
+};
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
